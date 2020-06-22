@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Museums in time of COVID-19</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/myBootstrap.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+    <!-- JS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/leaflet.ajax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/geojson/0.5.0/geojson.min.js"></script>
+
+  </head>
+
+  <body>
+    <!-- start nav bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="navbar-custom">
+     <!-- <a class="navbar-brand" href="#">Museums Digital Initiatives during COVID-19</a> -->
+      <!-- placeholder for Project Name or Logo with link to the start site-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contribute.html">Contribute</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- end nav bar -->
+    
+    <h2 class="text-center" style="padding-top: 90px; padding-bottom: 30px"> Museum digital
+      initiatives during the Coronavirus Pandemic</h2>
+    <main role="main" class="container">
+      <!-- intro -->
+      <p>This map aims to show the digital initatives undertaken by museums during the COVID-19
+        pandemic. <br /> There are lists of various types of projects and Twitter data collections:
+        on the top-right corner of the map, there is a control to select and filter the categories.
+        <!--   It is envisioned as the first step in a research on museum digital strategies and digital engagement practices during this period, 
+    led by Dr Chiara Zuanni at the University of Graz. -->
+      </p>
+      <p>The dataset is being regularly updated: if you wish to add a museum initiative, you can do
+        so by clicking on the tab 'contribute' or <a href="contribute.html">here</a>.</p>
+      <!-- end intro -->
+      
+      <!-- start legend -->
+      <div class="mt-5" style="border: 1px solid #c3c3c3; padding: 20px">
+        <div class="row" style="padding-top: 5px; padding-bottom: 10px">
+          <h6>Legend: digital projects</h6>
+        </div>
+        <div class="row">
+          <div class="col-md-1"><img src="img/rapidresp.png" alt="rapidresponsecollection" height="50" width="35" /><br /><span title="Initiatives collecting objects (incl. born-digital ones) related to the Coronavirus Pandemic." class="legend">Contemporary Collecting Projects</span></div>
+          <div class="col-md-1"><img src="img/socmedia.png" alt="socialmedia" height="50" width="35" /><br /><span title="Social media initiatives by an institution (note that trending hashtags have been tracked separately)." class="legend">Social Media Initiatives</span></div>
+          <div class="col-md-1"><img src="img/talk.png" alt="streamingtalk" height="50" width="35" /><br /><span title="Museums presenting content via streaming services or podcasts." class="legend">Streaming Content</span></div>
+          <div class="col-md-1"><img src="img/tour.png" alt="virtualtour" height="50" width="35" /><br /><span title="Museums offering 'virtual tours', in a range of ways (e.g. via video, 3D, app, blog series)." class="legend">Virtual Tours</span></div>
+          <div class="col-md-1"><img src="img/exhibition.png" alt="onlineexhibition" height="50" width="35" /><br /><span title="Museums promoting online collection portals and online exhibitions." class="legend">Online Exhibitions</span></div>
+          <div class="col-md-1"><img src="img/gamification.png" alt="gamification" height="50" width="35" /><br /><span title="Museums offering games and entertainment activities (e.g. quizzes, puzzles)." class="legend">Games</span></div>
+          <div class="col-md-1"><img src="img/elearning.png" alt="elearning" height="50" width="35" /><br /><span title="Museums offering educational resources online (e.g. activity guides, suggestions for DIY projects)." class="legend">Educational Content</span></div>
+          <div class="col-md-1"><img src="img/other.png" alt="otheractivity" height="50" width="35" /><br /><span title="Other types of activities, not covered by the previous categories." class="legend">Other Activities</span></div>
+          <div class="col-md-1"><img src="img/closedbutactive.png" alt="closedbutactive" height="50" width="35" /><br /><span title="Twitter collection for the #ClosedButActive" class="legend">Tweets:<br />#ClosedbutActive</span></div>
+        </div>
+     <!--<div class="row" style="padding-top: 5px; padding-bottom: 10px">
+            <h6>Legend: Tweets Archives</h6>
+          </div>
+          <div class="row">  
+          <div class="col-md-2"><img src="img/MuseumFromHome.png" alt="MuseumFromHome" height="50" width="35" /><br /><span title="Twitter collection for the #MuseumFromHome" class="legend">Tweets:<br />#MuseumFromHome</span></div>
+          <div class="col-md-2"><img src="img/MuseumsUnlocked.png" alt="MuseumsUnlocked" height="50" width="35" /><br /><span title="Twitter collection for the #MuseumsUnlocked" class="legend">Tweets:<br />#MuseumsUnlocked</span></div>
+          <div class="col-md-2"><img src="img/MuseiItaliani.png" alt="MuseiItaliani" height="50" width="35" /><br /><span title="Twitter collection for the #MuseiItaliani" class="legend">Tweets:<br />#MuseiItaliani</span></div>  </div>-->
+      </div>
+      <!-- end legend -->
+      
+      <!-- map -->
+      <div id="mapid" style="height:700px; width:100%; align-content: center; padding: 80px"></div>
+      <!-- end map -->
+      <br />
+      <br />
+    </main>
+    
+    <!-- data for the map-->
+    <script src="js/base.js"></script>
+    <script src="js/icon.js"></script>
+    <script src="js/myspreadsheetdata.js"></script>
+    <script src="js/crowdsourced.js"></script>
+    <script src="js/closedbutactive.js"></script>
+    <!-- <script src="js/MuseumsUnlocked.js"></script>-->
+    <!--  <script src="js/MuseumFromHome.js"></script>--> 
+   
+    <!-- start footer -->
+    <footer>
+      <div class="container" style="padding:20px">
+        <div class="row">
+          <div class="col">
+            <h6>More Information</h6>
+            <!-- start placeholder if impressum/privacy/terms are needed -->
+            <a href="imprint.html">Imprint<br /></a>
+            <a href="privacy.html">Privacy<br /></a>
+
+            <!-- end placeholder if impressum/privacy/terms are needed -->
+            <div class="icons">
+              <br />This work is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                Attribution-NonCommercial-ShareAlike 4.0 International License</a><br />
+              <a href="https://informationsmodellierung.uni-graz.at/en/"><img
+                  src="img/logo_zim1.png" title="ZIM-ACDH" alt="ZIM-ACDH" height="50" padding="10px"
+                 /></a>
+              <a href="https://www.uni-graz.at/en/"><img src="img/logo_unigraz.jpg"
+                  title="Karl Franzens Universität Graz" alt="UniGrazLogo" height="50"
+                  padding="10px" /></a>
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+                  alt="Creative Commons License" style="border-width:0"
+                  src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+            </div>
+          </div>
+
+          <div class="col-md-3"><h6>Contact</h6> Dr Chiara Zuanni <br /> Zentrum für
+            Informationsmodellierung - <br /> Austrian Centre for Digital Humanities <br />
+            Karl-Franzens-Universität Graz <br />
+            <a href="mailto:chiara.zuanni@uni-graz.at">Email: chiara.zuanni@uni-graz.at</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+  </body>
+</html>
