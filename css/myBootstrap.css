@@ -9506,3 +9506,11 @@ footer {
         margin-bottom: 10px;
         max-width: 100px;
     }
+
+li {
+ 	color: #383C47;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-weight: lighter;
+	font-size: 16px;
+	text-align: left;
+}
